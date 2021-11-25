@@ -48,6 +48,9 @@ on init
     setprop ro.boot.avb_version 1.0
     setprop ro.boot.vbmeta.avb_version ${ro.boot.avb_version}
 
+on boot
+    setprop sys.usb.config adb
+
 on property:ro.build.version.release_orig=*
     setprop ro.build.version.release ${ro.build.version.release_orig}
 
